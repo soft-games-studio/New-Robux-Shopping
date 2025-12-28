@@ -1,8 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+
+
+<!-- ✔ Google Site Verification (correctamente colocado) -->
+<meta name="google-site-verification" content="vD1F80dNjXhWhgxG7U8fRYBPnhG6ThwzzU76gc9pDGc"/>
+<style>
+
 
 /* ===== BURBUJA FLOTANTE ===== */
 #floatingBubble {
@@ -187,6 +197,7 @@ color: black;
 
 <!-- CASILLAS CON SCROLL -->
 <div id="scrollArea">
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -682,6 +693,7 @@ window.open(
 function openVIP() { document.getElementById("vipModal").style.display = "flex"; }
 function closeVIP() { document.getElementById("vipModal").style.display = "none"; }
 
+
 /* ========================= ABRIR / CERRAR MÉTODOS ========================= */
 function openVIPPayment() {
     closeVIP();
@@ -702,175 +714,1263 @@ function payVIPWhats() {
 }
 </script>
 
-<title>Robux Shopping</title>
+</body>
+</html>
+
 
 <style>
-body{
-  margin:0;
-  font-family: Arial, Helvetica, sans-serif;
-  background:#0b0b0b;
-  color:#fff;
+/* ========= OVERRIDE BLANCO + GRIS ========= */
+:root{
+  --main-white:#ffffff;
+  --soft-gray:#bfc3c7;
+  --dark-gray:#1a1c1e;
 }
 
-header{
+/* BURBUJA */
+#floatingBubble{
+  background:linear-gradient(135deg,var(--main-white),var(--soft-gray)) !important;
+  box-shadow:0 0 22px rgba(255,255,255,.6) !important;
+}
+
+/* OVERLAY RULETA */
+#wheelContainer{
+  background:radial-gradient(circle at top,#2a2d30,#050606) !important;
+}
+
+/* CAJA RULETA */
+#wheelBox{
+  background:linear-gradient(160deg,#1b1d1f,#0b0c0d) !important;
+  box-shadow:0 0 35px rgba(255,255,255,.25) !important;
+}
+
+/* RULETA */
+#wheel{
+  border-color:var(--soft-gray) !important;
+  box-shadow:
+    0 0 22px rgba(255,255,255,.55),
+    inset 0 0 25px rgba(255,255,255,.25) !important;
+}
+
+/* FLECHA */
+#pointer{
+  color:var(--main-white) !important;
+  text-shadow:0 0 10px rgba(255,255,255,.7) !important;
+}
+
+/* BOTÓN GIRAR */
+#spinBtn{
+  background:linear-gradient(135deg,var(--main-white),var(--soft-gray)) !important;
+  color:#000 !important;
+  box-shadow:0 0 18px rgba(255,255,255,.55) !important;
+}
+
+/* RESULTADO */
+#result{
+  color:var(--main-white) !important;
+}
+
+/* CASILLAS */
+.buyBox{
+  background:linear-gradient(145deg,#1c1f22,#141618) !important;
+  border-color:var(--soft-gray) !important;
+  color:var(--main-white) !important;
+}
+
+/* BUNDLES */
+.bundle{
+  border-color:var(--main-white) !important;
+  box-shadow:0 0 18px rgba(255,255,255,.25) !important;
+}
+.bundle h2{ color:var(--soft-gray) !important; }
+.bundle button{
+  background:linear-gradient(135deg,var(--main-white),var(--soft-gray)) !important;
+  color:#000 !important;
+}
+
+/* MODALES */
+.modal-box,
+.vip-card,
+.vip-pay-card{
+  border-color:var(--soft-gray) !important;
+  box-shadow:0 0 25px rgba(255,255,255,.35) !important;
+}
+
+/* VIP */
+.vip-badge{
+  background:linear-gradient(135deg,var(--main-white),var(--soft-gray)) !important;
+  box-shadow:0 0 18px rgba(255,255,255,.65) !important;
+}
+.vip-main-btn{
+  background:linear-gradient(135deg,var(--main-white),var(--soft-gray)) !important;
+  color:#000 !important;
+}
+</style>
+
+
+<style>
+/* ====== Base y Reset ====== */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{
+  height:100%;
+  font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  background:linear-gradient(180deg,#0e0f11 0%,#050606 100%);
+  color:#ffffff;
+  overflow-x:hidden;
   text-align:center;
-  padding:25px 10px;
-  background:linear-gradient(180deg,#111,#000);
-  border-bottom:1px solid #222;
+  padding-top:88px;
 }
+a{text-decoration:none}
 
+/* ====== TOP BAR ====== */
+.top-bar{
+  position:fixed;
+  top:0;left:0;width:100%;
+  background:linear-gradient(90deg,#ffffff,#bfc3c7);
+  border-bottom:3px solid rgba(255,255,255,.25);
+  box-shadow:0 6px 24px rgba(255,255,255,.25);
+}
+.top-bar div{font-weight:700;color:#000}
+
+/* ====== HEADER ====== */
+header{margin-top:6px;padding:8px 12px}
 h1{
-  margin:0;
-  font-size:32px;
-  letter-spacing:2px;
+  font-size:2rem;
+  color:#ffffff;
+  letter-spacing:.6px;
+  text-shadow:0 0 18px rgba(255,255,255,.6);
 }
-
 h2{
-  margin:5px 0;
-  font-weight:normal;
-  color:#aaa;
+  color:#cfd2d6;
+  font-weight:500;
+  margin-top:6px;
+  font-size:1rem;
 }
-
 .small{
-  font-size:12px;
-  color:#888;
+  font-size:.95rem;
+  color:#bfc3c7;
+  margin-top:8px;
 }
 
+/* ====== CONTAINER ====== */
 .container{
-  max-width:480px;
-  margin:auto;
-  padding:15px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  justify-content:center;
+  padding:20px;
+  max-width:1100px;
+  margin:8px auto;
 }
 
-h5{
-  margin:15px 5px;
-  font-size:16px;
-  color:#ddd;
-}
-
+/* ====== CARD ====== */
 .card{
-  background:#141414;
-  border-radius:14px;
-  padding:15px;
-  margin-bottom:15px;
-  box-shadow:0 0 15px rgba(0,0,0,.6);
+  background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02));
+  width:94%;
+  max-width:420px;
+  border-radius:18px;
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  box-shadow:0 10px 34px rgba(0,0,0,.7), inset 0 -4px 18px rgba(255,255,255,.08);
+  transition:transform .28s,box-shadow .28s;
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.25);
+}
+.card:hover{
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 22px 50px rgba(255,255,255,.25);
 }
 
 .robux-title{
-  font-size:18px;
+  font-size:1.35rem;
+  color:#ffffff;
   margin-bottom:8px;
+  font-weight:700;
+  text-shadow:0 0 14px rgba(255,255,255,.5);
 }
 
+/* ====== PRICE ====== */
 .price-row{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-bottom:10px;
+}
+.price{
+  font-weight:800;
+  color:#e5e7ea;
+  font-size:1.15rem;
+}
+.price-bar{
+  width:92%;
+  height:12px;
+  border-radius:10px;
+  background:linear-gradient(90deg,#ffffff,#bfc3c7);
+  margin-top:10px;
+  box-shadow:0 6px 30px rgba(255,255,255,.25) inset;
+  position:relative;
+  overflow:hidden;
+}
+.price-bar::after{
+  content:"";
+  position:absolute;
+  left:-30%;
+  top:0;
+  width:50%;
+  height:100%;
+  background:linear-gradient(90deg,rgba(255,255,255,.45),rgba(255,255,255,0));
+  transform:skewX(-18deg);
+  animation:barShine 2.2s linear infinite;
+}
+@keyframes barShine{to{left:120%}}
+
+/* ====== BUTTON ====== */
+.btn{
+  margin-top:14px;
+  padding:16px 26px;
+  font-size:1.05rem;
+  border-radius:999px;
+  border:none;
+  cursor:pointer;
+  background:linear-gradient(90deg,#ffffff,#bfc3c7);
+  color:#000;
+  font-weight:800;
+  box-shadow:0 10px 30px rgba(255,255,255,.35),0 2px 6px rgba(0,0,0,.25);
+}
+.btn:hover{filter:brightness(1.1)}
+.btn:active{transform:translateY(2px) scale(.99)}
+
+.memberships{max-width:1000px;margin:18px auto;padding:14px}
+
+/* ====== MODAL ====== */
+#overlayPay{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,.75);
+  z-index:260;
+}
+.modal{
+  background:linear-gradient(180deg,#1a1c1f,#0c0d0f);
+  border-radius:16px;
+  padding:18px;
+  width:94%;
+  max-width:560px;
+  color:#ffffff;
+  box-shadow:0 20px 60px rgba(0,0,0,.8);
+  border:2px solid rgba(255,255,255,.3);
+}
+.modal h3{color:#ffffff;margin-bottom:10px}
+
+.instruction{
+  background:rgba(255,255,255,.05);
+  padding:12px;
+  border-radius:10px;
+  margin:10px 0;
+  border-left:6px solid #ffffff;
+  color:#e5e7ea;
+}
+
+.actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-top:12px;
+}
+
+.copyBtn{
+  background:linear-gradient(90deg,#ffffff,#bfc3c7);
+  color:#000;
+  padding:10px 12px;
+  border-radius:10px;
+  border:none;
+  cursor:pointer;
+  font-weight:700;
+}
+.copyBtn:active{transform:translateY(2px)}
+
+.ghost{
+  background:transparent;
+  border:2px solid #bfc3c7;
+  color:#bfc3c7;
+  padding:10px 12px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:700;
+}
+
+/* ====== CONFETTI ====== */
+.confetti{position:fixed;z-index:9999;pointer-events:none}
+
+/* ====== FOOTER ====== */
+footer{
+  margin:28px 0 80px;
+  color:#bfc3c7;
+  font-size:.95rem;
+  text-shadow:0 0 10px rgba(255,255,255,.35);
+}
+</style>
+
+<!-- ========= LOADER SECUENCIAL SOLO CELULAR ========= -->
+<style>
+#mobileLoader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#0e0e0e;
+display:none;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+z-index:999999;
+}
+
+/* SPINNER */
+.spinner{
+width:70px;
+height:70px;
+border:6px solid rgba(255,255,255,0.1);
+border-top:6px solid #00ff88;
+border-radius:50%;
+animation:spin 1s linear infinite;
+margin-bottom:20px;
+}
+
+/* CHECK DIBUJADO */
+.check{
+display:none;
+width:60px;
+height:60px;
+border-radius:50%;
+border:3px solid #00ff88;
+margin-bottom:20px;
+position:relative;
+}
+
+.check::after{
+content:'';
+position:absolute;
+width:18px;
+height:35px;
+border-right:4px solid #00ff88;
+border-bottom:4px solid #00ff88;
+transform:rotate(45deg);
+top:8px;
+left:20px;
+stroke-dasharray:60;
+stroke-dashoffset:60;
+animation:drawCheck .8s ease forwards;
+}
+
+/* TEXTO */
+.loader-text{
+font-size:1.1rem;
+font-weight:700;
+color:#eaeaea;
+text-align:center;
+max-width:80%;
+opacity:0;
+}
+
+/* TEXTO COMPLETADO */
+.completed{
+color:#00ff88;
+}
+
+/* ANIMACIONES */
+.fade-in{animation:fadeIn .6s ease forwards}
+.fade-out{animation:fadeOut .6s ease forwards}
+
+@keyframes spin{
+to{transform:rotate(360deg)}
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(10px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes fadeOut{
+from{opacity:1;transform:translateY(0)}
+to{opacity:0;transform:translateY(-10px)}
+}
+
+@keyframes drawCheck{
+from{
+opacity:0;
+transform:rotate(45deg) scale(.5);
+}
+to{
+opacity:1;
+transform:rotate(45deg) scale(1);
+}
+}
+</style>
+
+<div id="mobileLoader">
+    <div class="spinner" id="spinner"></div>
+    <div class="check" id="check"></div>
+    <div class="loader-text" id="loaderText">Cargando...</div>
+</div>
+
+<script>
+if (window.innerWidth <= 768) {
+
+const loader = document.getElementById("mobileLoader");
+const text = document.getElementById("loaderText");
+const spinner = document.getElementById("spinner");
+const check = document.getElementById("check");
+
+loader.style.display = "flex";
+
+const steps = [
+  { msg: "Cargando...", time: 4000 },
+  { msg: "Actualizando app...", time: 4000 },
+  { msg: "¿Sabías que nuestra App está en venta?", time: 5000 },
+  { msg: "Cómprala por solo $29.99", time: 3000 },
+  { msg: "También hay descuento por código.", time: 3000 },
+  { msg: "Completado!", time: 3000, done: true }
+];
+
+let index = 0;
+
+function nextStep(){
+  if(index >= steps.length){
+    loader.classList.add("fade-out");
+    setTimeout(() => loader.remove(), 700);
+    return;
+  }
+
+  const step = steps[index];
+
+  text.className = "loader-text fade-in";
+  text.textContent = step.msg;
+
+  if(step.done){
+    text.classList.add("completed");
+    spinner.style.display = "none";
+    check.style.display = "block";
+  }
+
+  setTimeout(() => {
+    text.classList.remove("fade-in");
+    text.classList.add("fade-out");
+    index++;
+    setTimeout(nextStep, 600);
+  }, step.time);
+}
+
+nextStep();
+}
+</script>
+<!-- ========= FIN LOADER ========= -->
+
+<style>
+:root{
+  --white:#ffffff;
+  --gray:#bfc3c7;
+  --bg:#050606;
+}
+
+/* ================= BASE ================= */
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--white);
+  font-family:Arial, sans-serif;
+}
+
+/* ================= TOP POINTS ================= */
+#topPoints{
+  position:fixed;
+  top:12px;
+  right:12px;
+  background:linear-gradient(135deg,var(--white),var(--gray));
+  color:#000;
+  padding:10px 16px;
+  border-radius:14px;
+  font-weight:900;
+  box-shadow:0 0 18px rgba(255,255,255,.6);
+  z-index:1000;
+}
+
+/* ================= LOGIN ================= */
+#loginScreen{
+  position:fixed;
+  inset:0;
+  background:radial-gradient(circle at top,#1a1c1f,#050606);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.login-card{
+  width:90%;
+  max-width:380px;
+  background:#0f0f10;
+  border-radius:18px;
+  padding:30px 25px;
+  text-align:center;
+  box-shadow:0 0 40px rgba(255,255,255,.25);
+  border:1px solid rgba(255,255,255,.25);
+}
+
+.login-card h1{
+  margin-bottom:20px;
+  color:var(--white);
+}
+
+#loginForm{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .6s ease;
+}
+#loginForm.show{ max-height:260px }
+
+.login-card input{
+  width:100%;
+  padding:14px;
+  margin:10px 0;
+  background:#0b0e10;
+  border:1px solid #2a2d30;
+  border-radius:10px;
+  color:#fff;
+}
+
+/* BOTÓN PRINCIPAL */
+.btn-main{
+  width:100%;
+  padding:14px;
+  margin-top:12px;
+  background:linear-gradient(135deg,var(--white),var(--gray));
+  border:none;
+  border-radius:12px;
+  font-weight:bold;
+  cursor:pointer;
+  color:#000;
+  box-shadow:0 0 18px rgba(255,255,255,.35);
+}
+
+#error{ color:#ff6b6b; margin-top:10px }
+
+/* ================= SHOP ================= */
+#shop{
+  display:none;
+  padding:80px 20px;
+}
+
+.card{
+  background:#0f0f10;
+  border:2px solid var(--gray);
+  border-radius:16px;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 0 22px rgba(255,255,255,.2);
+}
+</style>
+
+<!-- ================= BURBUJA COMPRA DERECHOS ================= -->
+
+<style>
+.buy-bubble{
+position:fixed;
+bottom:20px;
+right:20px;
+background:linear-gradient(135deg,#00c6ff,#0072ff);
+padding:18px;
+border-radius:30px;
+max-width:260px;
+box-shadow:0 0 25px rgba(0,200,255,.7);
+animation:bounce 2s infinite alternate;
+cursor:pointer;
+z-index:9999;
+font-family:Poppins,sans-serif;
+}
+
+.buy-bubble h4,.buy-bubble p{
+margin:0;
+color:#fff;
+}
+
+.modal{
+position:fixed;
+top:0;left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.75);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:10000;
+}
+
+.modal-content{
+background:#111;
+padding:25px;
+border-radius:22px;
+max-width:90%;
+position:relative;
+animation:zoomIn .5s ease;
+color:#fff;
+box-shadow:0 0 30px rgba(0,255,255,.4);
+}
+
+.close-btn{
+position:absolute;
+top:10px;
+right:14px;
+font-size:1.4rem;
+cursor:pointer;
+color:#ff6f61;
+}
+
+.buy-btn{
+background:gold;
+color:#000;
+margin-top:15px;
+width:100%;
+padding:12px;
+border:none;
+border-radius:16px;
+font-weight:800;
+font-size:1.1rem;
+cursor:pointer;
+}
+
+.loading{
+margin-top:12px;
+font-weight:800;
+color:#00ffe5;
+display:none;
+text-align:center;
+}
+
+@keyframes bounce{to{transform:translateY(-12px)}}
+@keyframes zoomIn{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
+</style>
+
+<!-- ========= BURBUJA COMPRA DERECHOS (GRIS + VERDE) ========= -->
+
+<style>
+.buy-bubble{
+position:fixed;
+bottom:120px; /* ⬆️ más arriba, no tapa nada */
+right:16px;
+background:linear-gradient(135deg,#2f2f2f,#3a3a3a);
+padding:16px 18px;
+border-radius:30px;
+max-width:260px;
+box-shadow:0 0 25px rgba(0,255,120,.5);
+animation:bounce 2s infinite alternate;
+cursor:pointer;
+z-index:9999;
+font-family:Poppins,sans-serif;
+}
+
+.buy-bubble h4{
+margin:0;
+color:#00ff88;
+font-size:1rem;
+}
+
+.buy-bubble p{
+margin:0;
+font-size:.85rem;
+color:#dcdcdc;
+}
+
+/* MODAL */
+.modal{
+position:fixed;
+top:0;left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.8);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:10000;
+}
+
+.modal-content{
+background:#1f1f1f;
+padding:25px;
+border-radius:22px;
+max-width:90%;
+position:relative;
+animation:zoomIn .5s ease;
+color:#eaeaea;
+box-shadow:0 0 30px rgba(0,255,120,.4);
+}
+
+.close-btn{
+position:absolute;
+top:10px;
+right:14px;
+font-size:1.4rem;
+cursor:pointer;
+color:#ff5c5c;
+}
+
+.buy-btn{
+background:linear-gradient(135deg,#00ff88,#00cc6a);
+color:#003320;
+margin-top:15px;
+width:100%;
+padding:12px;
+border:none;
+border-radius:16px;
+font-weight:800;
+font-size:1.1rem;
+cursor:pointer;
+}
+
+.loading{
+margin-top:12px;
+font-weight:800;
+color:#00ff88;
+display:none;
+text-align:center;
+}
+
+@keyframes bounce{to{transform:translateY(-10px)}}
+@keyframes zoomIn{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
+</style>
+
+<!-- ========= BURBUJA COMPRA DERECHOS (GRIS + VERDE) ========= -->
+
+
+<style>
+.buy-bubble{
+position:fixed;
+bottom:120px; /* ⬆️ más arriba, no tapa nada */
+right:16px;
+background:linear-gradient(135deg,#2f2f2f,#3a3a3a);
+padding:16px 18px;
+border-radius:30px;
+max-width:260px;
+box-shadow:0 0 25px rgba(0,255,120,.5);
+animation:bounce 2s infinite alternate;
+cursor:pointer;
+z-index:9999;
+font-family:Poppins,sans-serif;
+}
+
+.buy-bubble h4{
+margin:0;
+color:#00ff88;
+font-size:1rem;
+}
+
+.buy-bubble p{
+margin:0;
+font-size:.85rem;
+color:#dcdcdc;
+}
+
+/* MODAL */
+.modal{
+position:fixed;
+top:0;left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.8);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:10000;
+}
+
+.modal-content{
+background:#1f1f1f;
+padding:25px;
+border-radius:22px;
+max-width:90%;
+position:relative;
+animation:zoomIn .5s ease;
+color:#eaeaea;
+box-shadow:0 0 30px rgba(0,255,120,.4);
+}
+
+.close-btn{
+position:absolute;
+top:10px;
+right:14px;
+font-size:1.4rem;
+cursor:pointer;
+color:#ff5c5c;
+}
+
+.buy-btn{
+background:linear-gradient(135deg,#00ff88,#00cc6a);
+color:#003320;
+margin-top:15px;
+width:100%;
+padding:12px;
+border:none;
+border-radius:16px;
+font-weight:800;
+font-size:1.1rem;
+cursor:pointer;
+}
+
+.loading{
+margin-top:12px;
+font-weight:800;
+color:#00ff88;
+display:none;
+text-align:center;
+}
+
+@keyframes bounce{to{transform:translateY(-10px)}}
+@keyframes zoomIn{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
+</style>
+
+<!-- BURBUJA -->
+<div class="buy-bubble" onclick="openBuyModal()">
+<h4>🗨️ Comprar derechos ©️</h4>
+<p>Propiedad total + ganancias</p>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="buyModal">
+<div class="modal-content">
+<div class="close-btn" onclick="closeBuyModal()">✕</div>
+
+<h3 style="color:#00ff88">Comprar derechos ©️</h3>
+<p>
+Obtendrás <b>TODOS los derechos ©️</b> de la página,
+incluyendo ganancias y propiedad total.
+</p>
+<p><b>Precio: $29.99 DLS</b></p>
+
+<button class="buy-btn" onclick="buyRights()">> Comprar <</button>
+<div class="loading" id="buyLoading">Cargando.</div>
+</div>
+</div>
+
+<!-- SONIDOS -->
+<audio id="soundOpen" src="https://assets.mixkit.co/sfx/preview/mixkit-select-click-1109.mp3"></audio>
+<audio id="soundClick" src="https://assets.mixkit.co/sfx/preview/mixkit-confirmation-tone-2867.mp3"></audio>
+<audio id="soundClose" src="https://assets.mixkit.co/sfx/preview/mixkit-click-error-1110.mp3"></audio>
+
+<script>
+function openBuyModal(){
+document.getElementById("soundOpen").play();
+document.getElementById("buyModal").style.display="flex";
+}
+
+function closeBuyModal(){
+document.getElementById("soundClose").play();
+document.getElementById("buyModal").style.display="none";
+}
+
+function buyRights(){
+document.getElementById("soundClick").play();
+const loading=document.getElementById("buyLoading");
+loading.style.display="block";
+
+let dots=1;
+const anim=setInterval(()=>{
+loading.innerText="Cargando"+".".repeat(dots);
+dots=dots<3?dots+1:1;
+},700);
+
+setTimeout(()=>{
+clearInterval(anim);
+window.open(
+"https://wa.me/50379197720?text=Quiero%20comprar%20Todos%20los%20derechos%20de%20la%20página%20por%20$29.99",
+"_blank"
+);
+},5000);
+}
+</script>
+
+<!-- ========= FIN BURBUJA ========= -->
+
+</head>
+<body>
+<!-- ===== POINTS HUD ===== -->
+<div id="topPoints">Robux Points: <span id="robuxValue">0</span></div>
+
+<!-- ===== LOGIN ===== -->
+<div id="loginScreen">
+  <div class="login-card">
+    <h1>Inicia sesión</h1>
+
+    <button class="btn-main" onclick="showLogin()">Iniciar sesión</button>
+
+    <div id="loginForm">
+      <input type="text" id="username" placeholder="Usuario">
+      <input type="password" id="password" placeholder="Contraseña 🔐">
+      <button class="btn-main" onclick="login()">Entrar</button>
+      <p id="error"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ================= USUARIOS ================= */
+const users = [
+  {user:"Levittochimi56", pass:"levitiñochimino561", points:0},
+  {user:"Jonathan9091", pass:"Jonansa812", points:0},
+  {user:"Brianzmx17", pass:"Brianazx87", points:0},
+  {user:"NicolAZX881", pass:"NICOA192", points:0},
+  {user:"STEV172991", pass:"Stevnc8114", points:0},
+  {user:"Andersxn2012", pass:"ANDERSXN9182", points:99}
+];
+
+let currentUser = null;
+let robuxPoints = 0;
+const MAX_POINTS = 100000;
+
+/* ================= LOGIN ================= */
+function showLogin(){
+  loginForm.classList.add("show");
+}
+
+function login(){
+  const u = username.value.trim();
+  const p = password.value.trim();
+
+  const found = users.find(x => x.user === u && x.pass === p);
+  if(!found){
+    error.textContent = "Usuario o contraseña incorrectos";
+    return;
+  }
+
+  currentUser = found.user;
+  robuxPoints = found.points;
+  updatePoints(robuxPoints);
+
+  loginScreen.style.display = "none";
+  shop.style.display = "block";
+}
+
+/* ================= POINTS ================= */
+function updatePoints(val){
+  val = parseInt(val);
+  if(val > MAX_POINTS) val = MAX_POINTS;
+  if(val < 0) val = 0;
+
+  robuxPoints = val;
+  robuxValue.innerText = robuxPoints;
+}
+
+/* ================= ADMIN ================= */
+/* USO:
+   setRobuxPoints(99999)
+*/
+function setRobuxPoints(amount){
+  updatePoints(amount);
+}
+</script>
+
+
+<!-- ====== CUADRO INSTALAR ====== -->
+<div class="install-box">
+  <div class="zombie">
+    🧟🔫
+    <span>Zombie DUGUEON<br>LĮTĘ</span>
+  </div>
+  <button onclick="openBuy()">Instalar<br><b>$24.99</b></button>
+</div>
+
+<!-- ====== OVERLAY COMPRA ====== -->
+<div class="overlay" id="buyBox">
+  <div class="buy-card">
+    <div class="big-icon">🧟</div>
+    <h2>Zombie DUGUEON LĮTĘ</h2>
+
+    <p class="desc">
+      Juego desarrollado por:<br>
+      <b>New Brothers Studios LLC × Unreal Engine × Studios LLC × ANDZXX × Unity studio</b><br><br>
+
+      La calidad del juego está en desarrollo en estilos <b>3D a 4K HD</b>.<br>
+      Con una personalización de <b>HUDs y armas FPS</b> realizado por Unreal Engine × Unity Studio.<br><br>
+
+      Todavía en desarrollo pero ya estando disponible ✅<br>
+      Cada actualización costará <b>$4.99</b> por paquete.
+    </p>
+
+    <button class="buy-btn" onclick="goWhatsApp()">Comprar $24.99</button>
+    <button class="close-btn" onclick="closeBuy()">Cerrar</button>
+  </div>
+</div>
+
+<style>
+/* ====== CUADRO INFERIOR ====== */
+.install-box{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%) translateY(120px);
+  background:#f2f2f2;              /* blanco grisáceo */
+  border:2px solid #1a1a1a;        /* negro suave */
+  border-radius:14px;
+  padding:12px 18px;
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:14px;
+  animation:slideUp .8s ease forwards;
+  box-shadow:0 0 25px rgba(0,0,0,.25);
+  z-index:999;
+}
+
+@keyframes slideUp{
+  to{ transform:translateX(-50%) translateY(0); }
+}
+
+.zombie{
+  font-size:26px;
+  display:flex;
+  flex-direction:column;
+  line-height:1.1;
+  color:#1a1a1a;                  /* texto principal */
+}
+
+.zombie span{
+  font-size:12px;
+  color:#8f8f8f;                  /* gris medio */
+}
+
+.install-box button{
+  background:#1a1a1a;             /* negro */
+  color:#f5f5f5;                  /* blanco */
+  border:none;
+  padding:8px 14px;
+  border-radius:10px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* ====== OVERLAY ====== */
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:1000;
+}
+
+.buy-card{
+  background:#f4f4f4;             /* blanco */
+  border:2px solid #1a1a1a;
+  border-radius:18px;
+  padding:22px;
+  width:90%;
+  max-width:420px;
+  text-align:center;
+  animation:pop .4s ease;
+}
+
+@keyframes pop{
+  from{transform:scale(.8); opacity:0;}
+  to{transform:scale(1); opacity:1;}
+}
+
+.big-icon{
+  font-size:80px;
   margin-bottom:10px;
 }
 
-.price{
-  font-size:22px;
-  font-weight:bold;
-  color:#2bff88;
+.buy-card h2{
+  color:#1a1a1a;                  /* negro */
+  margin-bottom:10px;
 }
 
-.price-bar{
-  flex:1;
-  height:6px;
-  background:linear-gradient(90deg,#2bff88,#00bfff);
-  border-radius:10px;
+.desc{
+  font-size:13px;
+  color:#5f5f5f;                  /* gris texto */
+  line-height:1.4;
+  margin-bottom:16px;
 }
 
-.btn{
+.buy-btn{
+  background:#1a1a1a;
+  color:#ffffff;
+  border:none;
   width:100%;
   padding:12px;
-  margin-top:8px;
-  border:none;
   border-radius:12px;
-  background:#1f1f1f;
-  color:#fff;
-  font-size:14px;
+  font-weight:bold;
+  font-size:16px;
   cursor:pointer;
-  transition:.2s;
+  margin-bottom:8px;
 }
 
-.btn:hover{
-  background:#2bff88;
-  color:#000;
+.close-btn{
+  background:none;
+  color:#7a7a7a;
+  border:none;
+  cursor:pointer;
 }
 </style>
-</head>
-<body>
 
-<header>
-  <h1>Robux Shopping</h1>
-  <h2>𝐒𝐨𝐟𝐭 𝗚𝗮𝗺𝗲𝘀 𝑳𝑳𝑪</h2>
-  <p class="small">⏣</p>
-</header>
+<script>
+function openBuy(){
+  document.getElementById("buyBox").style.display="flex";
+}
 
-<main class="container" id="paquetes">
+function closeBuy(){
+  document.getElementById("buyBox").style.display="none";
+}
+
+function goWhatsApp(){
+  const msg = encodeURIComponent(
+    "Hola quiero comprar El nuevo Juego disponible por APK de $24.99"
+  );
+  window.open("https://wa.me/50373826693?text=" + msg, "_blank");
+}
+</script>
+
+
+<div class="top-bar" role="banner">
+  <div>🔥 <strong>Robux × Steal</strong></div>
+  <div id="serverCount" aria-live="polite">New Brothers Studios LLC</div>
+</div><header>
+<h1>ROBUX.COM</h1>
+<h2>Versión 11.9.21</h2>
+<p class="small">⏣</p>
+</header><main class="container" id="paquetes">
 <h5>Paquetes normales</h5>
+<!-- Paquetes Robux -->
+
+
 
 <div class="card">
   <div class="robux-title">⏣ 40 robux</div>
-  <div class="price-row">
-    <div class="price">$0.49</div><div class="price-bar"></div>
-  </div>
-  <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%2040%20robux%20por%20$0.49','_blank')">Comprar WhatsApp</button>
-  <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%2040%20robux%20por%206,000%20points','_blank')">Comprar por 6K points</button>
+  <div class="price-row"><div class="price">$0.49</div><div class="price-bar"></div></div>
+  <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%2080%20robux%20por%20$0.49','_blank')">Comprar WhatsApp</button>
+
+  <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%2080%20robux%20por%20$6,000%20points','_blank')">Comprar por 6K points</button>
+  
   <div class="small">-3% descuento</div>
 </div>
 
+
 <div class="card">
   <div class="robux-title">⏣ 80 robux</div>
-  <div class="price-row">
-    <div class="price">$1.75</div><div class="price-bar"></div>
-  </div>
+  <div class="price-row"><div class="price">$1.75</div><div class="price-bar"></div></div>
   <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%2080%20robux%20por%20$1.75','_blank')">Comprar WhatsApp</button>
-  <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%2080%20robux%20por%2012,000%20points','_blank')">Comprar por 12K points</button>
+
+  <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%2080%20robux%20por%20$12,000%20points','_blank')">comprar por 12K points</button>
   <div class="small">-3% descuento</div>
 </div>
 
 <div class="card">
   <div class="robux-title">⏣ 400 robux</div>
-  <div class="price-row">
-    <div class="price">$6.49</div><div class="price-bar"></div>
-  </div>
-  <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%20400%20robux%20por%20$6.49','_blank')">Comprar WhatsApp</button>
-  <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%20400%20robux%20por%2019,000%20points','_blank')">Comprar por 19K points</button>
+  <div class="price-row"><div class="price">$7.24</div><div class="price-bar"></div></div>
+  <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%20400%20robux%20por%20$7.24','_blank')">Comprar WhatsApp</button>
+   <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%2080%20robux%20por%20$19,000%20points','_blank')">Comprar por 19K points</button>
   <div class="small">-5% descuento</div>
 </div>
 
 <div class="card">
   <div class="robux-title">⏣ 800 robux</div>
-  <div class="price-row">
-    <div class="price">$12.99</div><div class="price-bar"></div>
-  </div>
+  <div class="price-row"><div class="price">$12.99</div><div class="price-bar"></div></div>
   <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%20800%20robux%20por%20$12.99','_blank')">Comprar WhatsApp</button>
-  <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%20800%20robux%20por%2027,000%20points','_blank')">Comprar por 27K points</button>
+   <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%2080%20robux%20por%20$27,000%20points','_blank')">Comprar por 27K points </button>
   <div class="small">-5% descuento</div>
 </div>
 
 <div class="card">
   <div class="robux-title">⏣ 1000 robux</div>
-  <div class="price-row">
-    <div class="price">$14.99</div><div class="price-bar"></div>
-  </div>
+  <div class="price-row"><div class="price">$14.99</div><div class="price-bar"></div></div>
   <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%201000%20robux%20por%20$14.99','_blank')">Comprar WhatsApp</button>
-  <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%201000%20robux%20por%2044,000%20points','_blank')">Comprar por 44K points</button>
+   <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%2080%20robux%20por%20$44,000%20points','_blank')">Comprar por 44K points</button>
   <div class="small">Paquete PREMIUM</div>
 </div>
 
 <div class="card">
   <div class="robux-title">⏣ 2000 robux</div>
-  <div class="price-row">
-    <div class="price">$24.99</div><div class="price-bar"></div>
-  </div>
+  <div class="price-row"><div class="price">$24.99</div><div class="price-bar"></div></div>
   <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%202000%20robux%20por%20$24.99','_blank')">Comprar WhatsApp</button>
-  <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%202000%20robux%20por%2078,000%20points','_blank')">Comprar por 78K points</button>
+ <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Quiero%20comprar%2080%20robux%20por%20$78,000%20points','_blank')">Comprar por 78K points</button>
   <div class="small">DISPONIBLE CON V.I.P!</div>
 </div>
 
-</main>
+<h1>Paquetes Especiales ⭐✨</h1>
+
+<h8>Tiempo restante: 5 Días</h8>
+<h9>paquetes limitados!</h9>
+
+<!-- Paquetes Robux -->
+
+<div class="card">
+  <div class="robux-title">⏣ 400 robux + Alfombra × Steal a Brainrot</div>
+  <div class="price-row"><div class="price">$12.49</div><div class="price-bar"></div></div>
+  <button class="btn" onclick="window.open('https://wa.me/50373826693?text= Quiero comprar bundle especial: 400 robux + Alfombra × STB por $12.49','_blank')">Comprar WhatsApp</button>
+  <button class="btn" onclick="window.open('https://wa.me/50373826693?text','_blank')">Paquetes Especiales solo por WhatsApp</button>
+  <div class="small">-5% descuento</div>
+</div>
+
+<div class="card">
+  <div class="robux-title">⏣ 800 robux + alfombra × Steal a Brainrot</div>
+  <div class="price-row"><div class="price">$18.99</div><div class="price-bar"></div></div>
+  <button class="btn" onclick="window.open('https://wa.me/50373826693?text= Quiero comprar el bundle especial: 800 Robux + Alfombra × STB por $18.99','_blank')">Comprar WhatsApp</button>
+ <button class="btn" onclick="window.open('https://wa.me/50373826693?text','_blank')">Paquetes Especiales solo por WhatsApp</button>
+  <div class="small">-5% descuento</div>
+</div>
+
+<div class="card">
+  <div class="robux-title">⏣ 1000 robux + comandos de administrador × Steal a Brainrot</div>
+  <div class="price-row"><div class="price">$69.99</div><div class="price-bar"></div></div>
+  <button class="btn" onclick="window.open('https://wa.me/50373826693?text= Quiero comprar bundle especial: 1,000 robux + comandos de administrador × Steal a Brainrot por $69.99','_blank')">Comprar WhatsApp</button>
+<button class="btn" onclick="window.open('https://wa.me/50373826693?text','_blank')">Paquetes Especiales solo por WhatsApp</button>
+  <div class="small">Paquete PREMIUM</div>
+</div>
+
+<div class="card">
+  <div class="robux-title">⏣ 2000 robux + Láser Gun × Steal a Brainrot</div>
+  <div class="price-row"><div class="price">$36.49</div><div class="price-bar"></div></div>
+  <button class="btn" onclick="window.open('https://wa.me/50373826693?text= Quiero Comprar Bundle especial: 2,000 robux + Láser Gun','_blank')">Comprar WhatsApp</button>
+  <button class="btn" onclick="window.open('https://wa.me/50373826693?text','_blank')">Paquetes Especiales solo por WhatsApp</button>
+  <div class="small">DISPONIBLE CON V.I.P!</div>
+</div>
+
+<!-- Membresías -->
+<section class="memberships" aria-labelledby="membersTitle">
+  <h3 id="membersTitle" style="color:#ffdca8;margin-bottom:10px">Membresías de bonificación de robux!</h3>
+  <div class="container" style="gap:12px;">
+  
+    <div class="card">
+      <div class="robux-title">Membresía 4 días — +25% robux</div>
+      <div class="price-row"><div class="price">$1.99</div><div class="price-bar"></div></div>
+      <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Hola,%20quiero%20comprar%20Membresía%204%20días%20+25%25','_blank')">WhatsApp</button>
+      <button class="btn" onclick="window.open('https://www.paypal.com/ncp/payment/MF96TPN6YAADY','_blank')">PayPal $1.99</button>
+      <div class="small">Extra robux en paquetes</div>
+    </div>
+    
+    <div class="card">
+      <div class="robux-title">Membresía 8 días — +25% robux</div>
+      <div class="price-row"><div class="price">$2.99</div><div class="price-bar"></div></div>
+      <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Hola,%20quiero%20comprar%20Membresía%208%20días%20+25%25','_blank')">WhatsApp</button>
+      <button class="btn" onclick="window.open('https://www.paypal.com/ncp/payment/6GPE2QLFQ7WYS','_blank')">PayPal $2.99</button>
+      <div class="small">Extra robux en paquetes</div>
+    </div>
+    
+    <div class="card">
+      <div class="robux-title">Membresía 15 días — +25% robux</div>
+      <div class="price-row"><div class="price">$4.99</div><div class="price-bar"></div></div>
+      <button class="btn" onclick="window.open('https://wa.me/50373826693?text=Hola,%20quiero%20comprar%20Membresía%2015%20días%20+25%25','_blank')">WhatsApp</button>
+      <button class="btn" onclick="window.open('https://www.paypal.com/ncp/payment/2RXSZ55D3FUVN','_blank')">PayPal $4.99</button>
+      <div class="small">Extra robux en paquetes!</div>
+    </div>
+    
+  </div>
+</section>
+</section><footer>© 2025 New Brothers Studios LLC — Paypal Company ®</footer>
 </body>
 </html>
