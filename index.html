@@ -572,113 +572,119 @@ window.open(
 <!-- ================== BURBUJAS VIP ================== -->
 
 <div class="vip-badge vip-bronce" onclick="openVIP('vip1')">
-  <span class="vip-badge-text">V.I.P</span>
-  <span class="vip-badge-sub">REGULAR</span>
+  <span class="vip-title">V.I.P</span>
+  <span class="vip-sub">REGULAR</span>
 </div>
 
 <div class="vip-badge vip-gold" onclick="openVIP('vip2')">
-  <span class="vip-badge-text">V.I.P</span>
-  <span class="vip-badge-sub">SUPER</span>
+  <span class="vip-title">V.I.P</span>
+  <span class="vip-sub">SUPER</span>
 </div>
 
 <div class="vip-badge vip-ultra" onclick="openVIP('vip3')">
-  <span class="vip-badge-text">V.I.P</span>
-  <span class="vip-badge-sub">ULTRA</span>
+  <span class="vip-title">V.I.P</span>
+  <span class="vip-sub">ULTRA</span>
   <div class="ultra-shine"></div>
 </div>
 
 <!-- ================== MODAL VIP REGULAR ================== -->
 <div id="vip1" class="vip-modal">
-  <div class="vip-card bronce-card">
-    <h2>🟤 V.I.P REGULAR</h2>
+  <div class="vip-card bronce-card anim-card">
+    <h2>Beneficios del V.I.P REGULAR:</h2>
     <ul>
-      <li>💰 Descuento en 40, 80 y 400 Robux</li>
-      <li>🍀 5 Giros Luck Spin</li>
-      <li>💻 Acceso a mitad del GitHub</li>
-      <li>🍀 Suerte ×3</li>
-      <li>⏱️ Giros cada 12 horas</li>
+      <li>• Destaca en los 40 robux, 80 robux y 400 robux dando un beneficio de precio reducido</li>
+      <li>• 5 Giros En Luck Spin 🍀</li>
+      <li>• acceso a la mitad del Código Github.</li>
+      <li>• SUERTE ×3 🍀</li>
+      <li>• Giros cada 12 Horas</li>
     </ul>
-    <button onclick="vipWhats('VIP REGULAR','$3.99 x 15 Días')">
-      SUSCRIBIRSE — $3.99 × 15 Días
-    </button>
+    <button onclick="vipWhats('V.I.P REGULAR','$3.99 × 15 Días')">$3.99 × 15 Días</button>
     <button class="close" onclick="closeVIP('vip1')">Cerrar</button>
   </div>
 </div>
 
 <!-- ================== MODAL VIP SUPER ================== -->
 <div id="vip2" class="vip-modal">
-  <div class="vip-card gold-card">
-    <h2>🟡 V.I.P SUPER</h2>
+  <div class="vip-card gold-card anim-card anim-gold">
+    <h2>Beneficios de V.I.P SUPER:</h2>
     <ul>
-      <li>💰 Descuento en 400, 500, 740 y 800 Robux</li>
-      <li>🍀 10 Giros Luck Spin</li>
-      <li>💻 Acceso casi total a GitHub</li>
-      <li>🍀 Suerte ×6</li>
-      <li>⏱️ Giros cada 6 horas</li>
+      <li>• Destaca en los 400 robux, 500 robux, 740 robux y 800 robux dando un beneficio de precio reducido</li>
+      <li>• 10 Giros en Luck Spin 🍀</li>
+      <li>• acceso a casi todo el código Github</li>
+      <li>• SUERTE ×6 🍀</li>
+      <li>• Giros cada 6 Horas</li>
     </ul>
-    <button onclick="vipWhats('VIP SUPER','$6.99 x Mes')">
-      SUSCRIBIRSE — $6.99 × Mes
-    </button>
+    <button onclick="vipWhats('V.I.P SUPER','$6.99 × Mes')">$6.99 × Mes</button>
     <button class="close" onclick="closeVIP('vip2')">Cerrar</button>
   </div>
 </div>
 
 <!-- ================== MODAL VIP ULTRA ================== -->
 <div id="vip3" class="vip-modal">
-  <div class="vip-card ultra-card">
-    <h2>💎 V.I.P ULTRA</h2>
+  <div class="vip-card ultra-card anim-card anim-ultra">
+    <h2>Beneficios de V.I.P ULTRA:</h2>
     <ul>
-      <li>🔥 Máximo descuento hasta 5,250 Robux</li>
-      <li>💻 Acceso TOTAL a GitHub</li>
-      <li>🍀 100 Giros Luck Spin</li>
-      <li>🍀 Suerte ×12</li>
-      <li>⏱️ Giros cada 2 horas</li>
-      <li>🏢 AYUDA SOFT CORPORATIÓN INC</li>
+      <li>• Destaca en los 800 robux, 1,000 robux, 2,000 robux, 4,200 robux y 5,250 robux dando un beneficio de precio reducido al Máximo</li>
+      <li>• acceso Completo a Código Github (MAX)</li>
+      <li>• 100 Giros Luck Spin 🍀 (MAX)</li>
+      <li>• Suerte ×12 🍀 (MAX)</li>
+      <li>• Giros Cada 2 Horas (MAX)</li>
+      <li>• AYUDA SOFT CORPORATIÓN INC</li>
     </ul>
-    <button onclick="vipWhats('VIP ULTRA','$9.99 x Mes')">
-      SUSCRIBIRSE — $9.99 × Mes
-    </button>
+    <button onclick="vipWhats('V.I.P ULTRA','$9.99 × Mes')">$9.99 × Mes</button>
     <button class="close" onclick="closeVIP('vip3')">Cerrar</button>
   </div>
 </div>
 
 <style>
-/* ================== BURBUJAS (FIXED + SAFE) ================== */
+/* ================== BURBUJAS ================== */
 .vip-badge{
   position:fixed;
   right:15px;
-  padding:14px 18px;
-  border-radius:18px;
+  padding:20px 24px;
+  border-radius:22px;
   text-align:center;
   cursor:pointer;
-  animation: float 2.5s ease-in-out infinite;
+  animation: float 2.2s ease-in-out infinite;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
+  overflow:hidden;
   z-index:1000;
 }
-.vip-badge-text{font-weight:900;font-size:16px;}
-.vip-badge-sub{font-size:10px;font-weight:bold;}
+
+.vip-title{font-size:24px;font-weight:900;} /* +40% */
+.vip-sub{font-size:14px;font-weight:bold;} /* +40% */
 
 .vip-bronce{top:70px;background:linear-gradient(135deg,#ff8c1a,#7a3e00);}
-.vip-gold{top:145px;background:linear-gradient(135deg,#fff700,#9e9e9e);}
-.vip-ultra{top:220px;background:linear-gradient(135deg,#00eaff,#003bff);}
+.vip-gold{top:160px;background:linear-gradient(135deg,#fff700,#9e9e9e);}
+.vip-ultra{
+  top:250px;
+  background:linear-gradient(135deg,#00eaff,#0047ff);
+  animation: float 2s ease-in-out infinite, ultraPulse 1.6s infinite;
+}
 
 @keyframes float{
   0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-6px)}
+  50%{transform:translateY(-8px)}
 }
 
-/* ================== BRILLO ULTRA (NO TOCA) ================== */
+/* ================== BRILLO ULTRA ================== */
 .ultra-shine{
   position:absolute;
   inset:0;
-  background:linear-gradient(120deg,transparent,rgba(255,255,255,.9),transparent);
-  animation: shine 2.3s infinite;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.95),transparent);
+  animation: shine 1.8s infinite;
   pointer-events:none;
 }
+
 @keyframes shine{
   from{transform:translateX(-100%)}
   to{transform:translateX(100%)}
+}
+
+@keyframes ultraPulse{
+  0%,100%{box-shadow:0 0 25px #00eaff}
+  50%{box-shadow:0 0 55px #7df9ff}
 }
 
 /* ================== MODAL ================== */
@@ -694,42 +700,65 @@ window.open(
 
 /* ================== TARJETAS ================== */
 .vip-card{
-  width:92%;
-  max-width:360px;
-  padding:22px;
-  border-radius:18px;
+  width:94%;
+  max-width:420px;
+  padding:30px;
+  border-radius:22px;
   color:#fff;
-  animation: pop .35s ease;
+  animation: pop .4s ease;
 }
+
+.vip-card h2{font-size:26px;} /* +40% */
+.vip-card ul{font-size:20px;} /* +40% */
 
 .bronce-card{
   background:linear-gradient(135deg,#b87333,#5c2c00);
-  border:3px solid #ffb347;
+  border:4px solid #ffb347;
 }
 .gold-card{
   background:linear-gradient(135deg,#ffd700,#8d8d8d);
-  border:3px solid #fff176;
+  border:4px solid #fff176;
 }
 .ultra-card{
   background:linear-gradient(135deg,#001d3d,#003566,#00eaff);
-  border:3px solid #7df9ff;
-  box-shadow:0 0 40px #00eaff;
+  border:4px solid #7df9ff;
+  box-shadow:0 0 45px #00eaff;
 }
 
-.vip-card ul{
-  text-align:left;
-  font-size:14px;
-  margin:10px 0;
+/* ================== ANIMACIONES EXTRA ================== */
+.anim-card{animation: pop .35s ease, cardFloat 3s infinite;}
+.anim-gold{animation: pop .35s ease, glowGold 2.2s infinite;}
+.anim-ultra{animation: pop .35s ease, ultraGlow 1.4s infinite;}
+
+@keyframes cardFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+}
+@keyframes glowGold{
+  0%,100%{box-shadow:0 0 20px gold}
+  50%{box-shadow:0 0 45px #fff176}
+}
+@keyframes ultraGlow{
+  0%,100%{box-shadow:0 0 40px #00eaff}
+  50%{box-shadow:0 0 80px #7df9ff}
 }
 
+/* ================== BOTONES ================== */
 .vip-card button{
   width:100%;
-  padding:13px;
-  margin-top:10px;
+  padding:18px;
+  margin-top:14px;
   border:none;
-  border-radius:12px;
+  border-radius:16px;
   font-weight:bold;
+  font-size:20px; /* +40% */
   cursor:pointer;
+  animation: btnPulse 2s infinite;
+}
+
+@keyframes btnPulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.06)}
 }
 
 .vip-card button:first-of-type{
@@ -742,7 +771,7 @@ window.open(
 }
 
 @keyframes pop{
-  from{transform:scale(.7);opacity:0}
+  from{transform:scale(.65);opacity:0}
   to{transform:scale(1);opacity:1}
 }
 </style>
